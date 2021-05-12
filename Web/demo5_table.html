@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table 태그 연습</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>교육</h1>
+    <h2>교육구성</h2>
+    <h3>기본교육(전공)</h3>
+    <!-- 
+      table태그는 표를 생성하는 태그이다.
+      table태그는 tread, tbody, tfoot, tr태그를 컨텐츠로 포함할 수 있다.
+      thead태그는 표의 헤더부를 생성하는 태그이다.
+      tbody는 표의 데이터부를 생성하는 태그이다.
+      tfoot는 표의 푸터부를 생성하는 태그이다.
+      thead, tbody, tfoot태그는 tr태그를 컨텐츠로 포함할 수 있다.
+      tr태그는 표의 행을 생성하는 태그이다.
+      tr태그는 th,td를 컨텐츠로 포함할 수 있다.
+      th와 td는 각각표의 제목칸, 표의 데이터칸을 생성하는 태그이다.
+      th와 td는 표의 제목이나 표의 데이터를 컨텐츠로 포함할 수 있다.
+
+      table
+        -thead
+          -tr
+            -th or td
+            -th or td
+        -tbody
+          -tr
+            -th or td
+            -th or td
+        -tfoot
+          -tr
+            -th or td
+            -th or td
+    -->
+    <table border="1">
+      <tread>
+        <tr>
+          <th>순번</th>
+          <th>분야</th>
+          <th>과정명</th>
+          <th>시간</th>
+          <th>운영형태</th>
+        </tr>
+      </tread>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>정보기술</td>
+          <td>Unity를 활용한 VR/AR 콘텐츠 개발</td>
+          <td>12</td>
+          <td>집체</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>정보기술</td>
+          <td>Open GL을 활용한 컴퓨터 그래픽스 기초</td>
+          <td>12</td>
+          <td>집체</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>정보기술</td>
+          <td>애자일 소프트웨어 개발방법론</td>
+          <td>12</td>
+          <td>이러닝</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <th colspan="4">전체 개설 과정 수</th>
+        <td>3개</td>
+      </tfoot>
+    </table>
+    <h3>기본교육 교육일정</h3>
+    <table border="1">
+      <thead>
+        <!--
+          //데이터베이스에서 과정정보를 조회한다.
+          List<Course> courseList = courseService.getCourseList();
+          //조회된 과정정보를 하나씩 가져와서, 동적으로 컨텐츠를 생성한다.
+          for(Course course : courseList) {
+          <tr>
+          <td>course.getNo()</td>
+          <td>course.getCategory()</td>
+          <td>course.getName()</td>
+          <td>course.getHours()</td>
+          <td>course.getOpType()</td>
+        </tr>
+          }
+        -->
+        <tr>
+          <th rowspan="2">구분</th>
+          <th colspan="4">전공분야 보수교육 운영일정</th>
+        </tr>
+        <tr>
+          <th>1차</th>
+          <th>2차</th>
+          <th>3차</th>
+          <th>4차</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>신청접수 및 선발</td>
+          <td>03.22 ~ 04.04</td>
+          <td>06.07 ~ 06.20</td>
+          <td>08.30 ~ 09.12</td>
+          <td>11.08 ~ 11.21</td>
+        </tr>
+        <tr>
+          <td>교육운영(30주)</td>
+          <td>04.19 ~ 06.13<br/>(8주)</td>
+          <td>07.05 ~ 08.22<br/>(7주)</td>
+          <td>09.27 ~ 11.14<br/>(7주)</td>
+          <td>12.06 ~ 01.30<br/>(8주)</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
