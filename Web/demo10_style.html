@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <title>태그의 style 속성</title>
+</head>
+<body>
+  <h1>태그의 style 속성</hi>
+  <p>style속성은 모든 태그가 공통으로 가지는 속성이다.</p>
+  <p>style속성은 태그에 스타일을 추가할 때 사용한다.</p>
+  <p>style속성을 사용하는 색, 글자크기, 테두리, 위치등을 변경할 수 있다.</p>
+
+  <!--
+    <태그 style="property:value; property:value; property:value;">컨텐츠</태그>
+
+    프로퍼티(Property) : CSS(Cascading Style Sheets) 프로퍼티를 저장한다.
+    값(Value) : CSS값을 지정한다.
+    * CSS는 웹페이지의 레이아웃을 변경하거나, 스타일을 변경할 때 사용한다.
+    * CSS로 색,글꼴,글자의 크기, 컨텐츠간의 간격, 컨텐츠의 포지션, 배경이미지, 테두리, 등을 컨트롤 할 수 있다.
+  -->
+
+  <h3>색 변경하기</h3>
+  <!--
+    color: 색이름;
+    color: #000000 ~ #ffffff
+            #000000 ~ 검정
+            #ff0000, f00 빨강
+            #00ff00, 0f0 초록
+            #0000ㄹㄹ, 00f 파랑
+            #ffffff 하양
+    color: rgb(0,   0,   0) ~ rgb(255, 255, 255)   
+  -->
+  <p style = "color: red;">글자를 빨갛게 표시한다.</p>
+  <p style = "color: #ff0000;">글자를 빨갛게 표시한다.</p>
+  <p style = "color: rgb(255, 0, 0);">글자를 빨갛게 표시한다.</p>
+
+  <h3>테두리</h3>
+  <p style = "border: 1px solid red;">테두리를 표시한다.</p>
+  <p style = "border: 2px solid red;">테두리를 표시한다.</p>
+
+  <p style = "border: 1px dotted black;">테두리를 표시한다.</p>
+  <p style = "border: 1px dashed grey;">테두리를 표시한다.</p>
+  
+  <p style = "border-top: 1px solid grey;">테두리를 표시한다.</p>
+  <p style = "border-right: 1px solid grey;">테두리를 표시한다.</p>
+  <p style = "border-bottom: 1px solid grey;">테두리를 표시한다.</p>
+  <p style = "border-left: 1px solid grey;">테두리를 표시한다.</p>
+
+  <p style = "border-left: 5px solid #00ced1; background-color: #e0ffff; padding: 5px;"></p>
+
+  <!--
+    margin은 다른 태그(엘리먼트)와의 간격
+    margin: 10px; top,botton,left,right 여백을 10px로 설정
+    margin: 10px 20px; top,botton 여백을 10px, left,right 여백을 20px로 설정
+    margin: 10px 20px 30px 40px; top,right,botton,left 순으로 여백을 설정
+  -->
+
+  <h3>여백</h3>
+  <p style = "border: 1px solid black; margin: 100px;">컨텐츠</p>
+  <p style = "border: 1px solid black; margin-left: 100px;">컨텐츠</p>
+  <p style = "border: 1px solid black; margin-right: 100px;">컨텐츠</p>
+  <p style = "border: 1px solid black; margin: 20px 100px;">컨텐츠</p>
+
+  <h3>패딩</h3>
+  <!--
+    padding: 테두리와 컨텐츠 사이의 간격이다.
+    padding: 10px;
+      top, bottom, left, right 패딩을 10px로 설정
+    padding: 10px 20px;
+      top, bottom 패딩을 10px, left,right 패딩을 20px로 설정
+    padding: 10px 20px 30px 40px;
+      top, right, bottom, left 순으로 패딩을 설정한다.
+  -->
+  <p style="border: 1px solid black; padding: 20px;"></p>
+
+  <h3>텍스트</h3>
+  <p style="text-align: left;">왼쪽 정렬</p>
+  <p style="text-align: center;"></p>가운데 정렬</p>
+  <p style="text-align: right;"></p>오른쪽 정렬</p>
+
+  <p style="font-weight: lighter;">컨텐츠</p>
+  <p style="font-weight: normal;">컨텐츠</p>
+  <p style="font-weight: bolder;">컨텐츠</p>
+
+  <p style="font-size: 10px;">컨텐츠</p>
+  <p style="font-size: 20px;">컨텐츠</p>
+  <p style="font-size: 30px;">컨텐츠</p>
+  </body>
+</html>
