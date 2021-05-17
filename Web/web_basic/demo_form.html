@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소 연습하기</title>
+  </head>
+  <body>
+    <h1>폼 요소 연습하기</h1>
+    <p>
+      폼 요소는 입력필드, 비밀번호 입력필드, 체크박스, 라디오버튼, 콤보박스 textarea, 첨부파일 선택필드, 버튼 등을 말한다.
+    </p>
+    <h3>input 태그 연습하기</h3>
+    <form method="POST" action="a.jsp">
+      입력필드 <br />
+      <input type="text" name="username" value="홍길동"/><br />
+      입력필드 <br />
+      <input type="text" name="userid" placeholder="아이디를 입력하세요"/><br />
+      비밀번호 입력필드 <br />
+      <input type="password" name="userpwd" placeholder="비밀번호를 입력하세요"/><br />
+      날짜 입력필드 <br />
+      <input type="date"  name="birth" ><br />
+      날짜 시간 입력필드<br />
+      <input type="datetime-local" name="eventDate"/></br />
+      숫자 입력필드<br />
+      <input type="number" name="amount"/> <br />
+      <input type="sumit" value="제출버튼">
+      <button>버튼1</button>
+      <button type="button">버튼2</button>
+    </form>
+    <h3>checkbox 연습하기</h3>
+    <form>
+      보유기술 <br/>
+      <input type="checkbox" name="skill" value="java" checked /> 자바
+      <input type="checkbox" name="skill" value="python" /> 파이썬
+      <input type="checkbox" name="skill" value="db" checked /> 데이터베이스
+      <input type="checkbox" name="skill" value="bigdata" disabled /> 빅데이터
+      <input type="checkbox" name="skill" value="ml" /> 머신러닝
+    </form>
+    <h3>radiobutton 연습하기</h3>
+    <form>
+      정렬순서 <br/>
+      <input type="radio" name="order" value="popular" checked/>인기순
+      <input type="radio" name="order" value="new" />최신순
+      <input type="radio" name="order" value="price" />가격순
+      <input type="radio" name="order" value="score" />평점순 <br />
+      채용구분 <br />
+      <input type="radio" name="workingType" value="인턴" />인턴
+      <input type="radio" name="workingType" value="계약" />계약직
+      <input type="radio" name="workingType" value="정규" checked/>정규직
+    </form>
+    <h3>selectbox 연습하기</h3>
+    <form>
+      근무지역
+      <select name="city">
+        <option value="seoul">서울</option>
+        <option value="kyeonggi">경기도</option>
+        <option value="incheon">인천</option>
+        <option value="kangwon" selected>강원도</option>
+        <option value="chungcheong" disabled>충청도</option>
+        <option value="jeonra">전라도</option>
+        <option value="kyongsang">경상도</option>
+        <option value="jeju">제주도</option>
+      </select>
+      학과선택
+      <select name="department">
+        <optgroup label="인문대학">
+          <option>국어국문학과</option>
+          <option>영어영문학과</option>
+          <option>철학과</option>
+          <option>신문방송학과</option>
+        </optgroup>
+        <optgroup label="자연과학대학">
+          <option>수학과</option>
+          <option>물리학과</option>
+          <option>화학과</option>
+          <option>생물학과</option>
+        </optgroup>
+        <optgroup label="공과대학">
+          <option>기계공학과</option>
+          <option>전기공학과</option>
+          <option>전자공학과</option>
+          <option>토목공학과</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <h3>textarea연습하기</h3>
+    <form>
+      자기소개<br />
+      <textarea name="profile" rows="10" cols="60"></textarea> <br />
+      상품설명 <br />
+      <textarea name="description" rows="5" cols="60" readonly>이 제품은 최고의 성능을 발회하는 노트북입니다.</textarea>
+    </form>
+    <h3>파일첨부하기</h3>
+    <form>
+      사진 : <input type="file" name="photo" /><br />
+    </form>
+    <h3>회원가입 폼</h3>
+    <form method="POST" action="register.jsp">
+      <label>이름</label> <br />
+      <input type="text" name="username" placeholder="이름을 입력하세요"/> <br />
+      <label>아이디</label> <br />
+      <input type="text" name="userid" placeholder="아이디를 입력하세요"/> <br />
+      <label>비밀번호</label> <br />
+      <input type="password" name="userpwd" placeholder="비밀번호를 입력하세요"/> <br />
+      <label>비밀번호 확인</label> <br />
+      <input type="password" name="confirmPwd" placeholder="비밀번호를 다시 입력하세요"> <br />
+      <label>성별</label> <br />
+      <input tyoe="radio" name="gender" value="남" checked /> 남자    
+      <input tyoe="radio" name="gender" value="여"/> 여자 <br />
+      <label>생일</label> <br />
+      <input type="date" name="birth" /><br />
+      <label>전화번호</label> <br />
+      <input type="text" name="tel" /> <br />
+      <label>보유기술</label> <br />
+      <input type="checkbox" name="skill" value="java" checked /> 자바
+      <input type="checkbox" name="skill" value="python" /> 파이썬
+      <input type="checkbox" name="skill" value="db" checked /> 데이터베이스
+      <input type="checkbox" name="skill" value="bigdata" disabled /> 빅데이터
+      <input type="checkbox" name="skill" value="ml" /> 머신러닝
+      <label>자기소개</label> <br />
+      <textarea name="profile" rows="10" cols="60" placeholder="자기소개서를 작성하세요"></textarea>
+      <input type="reset" value="취소"/>
+      <input type="submit" value="등록"/>
+    </form>
+  </body>
+</html>

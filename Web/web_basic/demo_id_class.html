@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>img 태그 연습</title>
+    <!--
+      CSS 선택자
+      - 스타일이 적용될 대상을 지정한다.
+      - 브라우져는 선택자를 분석하고, HTML문서내에서 선택자에 해당하는 태그(엘리먼트)를
+        전부 찾아서 지정된 스타일을 적용한다.
+      - 선택자 종류
+        + 태그 선택자
+          태그명 {CSS 스타일}
+        + 아이디 선택자
+          #아이디 속성값 {CSS 스타일}
+        + 클래스 선택자
+          .클래스 속성값 {CSS 스타일}
+        + 자손 선택자
+          * 선택자1의 내부에 있는 선택자2에 해당하는 태그를 선택한다.
+          선택자1 선택자2 {CSS 스타일}
+          작성예 
+          div h4 {CSS 스타일}
+          .section-box p {CSS 스타일}
+          #wrapper .section-box {CSS 스타일}
+    -->
+    
+    <style>
+      h1 {
+        color: red;
+        text-decoration: underline;
+      }
+      ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding: 0;
+      }
+      .section-box {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;  
+        display: none;
+      }
+      .section-title .section-title {
+        margin: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        color: dodgerblue;
+      }
+      .section-box p {
+        color: #aaa;
+        margin-top: 0;
+      }
+      .section-box ul li {
+        font-size: 14px;
+      }
+      .active {
+        display: block !important;
+      }
+      /*
+      #section-news {
+        display: block;
+      }
+      #section-ent {
+        display: none;
+      }
+      #section-sports {
+        display: none;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <h1>id와 class속성</h1>
+    <p>id속성은 특정 태그를 식별하기 위해서 사용된다.</p>
+    <p>HTML문서 전체에서 id속성값은 고유한 값이어야 한다.</p>
+    <p>id속성값은 특수문자나 숫자로 시작할 수 없다.</p>
+    <p>class속성은 같은 class속성값을 가진 태그에 같은 스타일을 적용하기 위해 사용된다.</p>
+    <p>HTML 문서에 같은 class속성값을 가지는 태그는 여러 개 존재할 수 있다.</p>
+    <p>class속성은 한 번에 여러개의 class속성값을 가질 수 있다.</p>
+    <h3>id와 class사용하기</h3>
+    <div>
+      <div id="section-news" class="section-box">
+        <h4 class="section-title">뉴스</h4>
+        <p>최신 뉴스 소식을 제공합니다.</p>
+        <ul>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+          <li>친구는 왜 한강 경사면에 있었나?</li>
+      </ul>
+      </div>
+      <div id="section-ent" class="section-box active">
+        <h4 class="section-title">연예</h4>
+        <p>최신 연예계 소식을 제공합니다.</p>
+        <ul>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+          <li>한예슬, 직접 공개한 열애... 남자친구는 배우</li>
+      </ul>
+      </div>
+      <div id="section-sports" class="section-box">
+        <h4 class="section-title">스포츠</h4>
+        <p>최신 스포츠 소식을 제공합니다.</p>
+        <ul>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+          <li>류현진이 AL에 있는 걸 행복하게 여기길...</li>
+      </ul>
+      </div>
+    </div>
+  </body>
+
+</html>
