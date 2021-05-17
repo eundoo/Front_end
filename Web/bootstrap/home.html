@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+      boostrap.min.css파일을 웹페이지에 포함시킨다.
+      boostrap.min.css파일은 bootstrap.css파일에서 불필요한 공백을 제거한 버전이다.
+
+      boostrap.min.css파일에는 레이아웃, 컴포넌트, 폼 등을 작성하는데 사용되는 다양한 css스타일들이
+      미리 정의되어 있다.
+      * 컴포넌트 - 버튼, 카드, 모달, 내비바, 리스트그룹, 테이블 등과 같이 웹페이지 작성에 사용되는 다양한 요소들이다.
+                   작성에 사용되는 다양한 요소들이다.
+      boostrap.min.css파일을 웹 페이지에 link태그를 사용해서 포함시키고,부트스트랩에서 
+      제공하는 다양한 레이아웃, 컴포넌트, 폼관련 스타일들을 사용하면 빠르게 웹 페이지를
+      작성할 수 있다.   
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      네비바 추가하기
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!--
+          .navbar-brand가 적용된 a태그에는 회사의 로고, 회사명을 컨텐츠로 가진다.
+          링크주소는 사이트 홈페이지로 지정한다.
+        -->
+        <a class="navbar-brand" href="/home.html">Eundoo Company</a>
+        <!--
+          .navbar-toggler는 화면의 너비가 작아지면 표시되고, 
+          button을 클릭할 때 마다 네비게이션 매뉴가 토글된다.
+        -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--
+          .collapse .navber-collapse는 위의 .navbar-toglle 버튼을 클릭할 때마다
+          토글되는 네비게이션 메뉴를 포함하는 태그에 추가하는 클래스 속성값이다.
+        -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!--
+            .navbar-nav는 네비게이션 메뉴리스트를 포함하는 태그에 붙인다.
+            .nav-item은 네비게이션 메뉴를 정의할 때 사용되는 클래스 속성 값이다.
+            .nav-link는 네비게이션 메뉴와 연결된 링크를 정의할 때 사용되는 클래스 속성값이다.
+            .nav-link .active는 현재 선택된 네비게이션 링크에 붙이는 클래스 속성값이다.
+          -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">직원관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">부서관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">직종관리</a>
+            </li>
+          </ul>
+          <ul class="d-flex navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그아웃</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">회원가입</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+    <!--
+      .container는 웹 페이지의 모든 컨텐츠를 포함하는 태그에 붙인다.
+      .container가 정의되어 있을 때 boostrap의 그리드 시스템을 사용해서
+      화면의 레이아웃을 쉽게 구성할 수 있다.
+    -->
+    <div class="container">
+      <!--
+        레이아웃 구성하기
+        - <div class="row"></div>를 추가한다.
+        * 새로운 행을 추가한다.
+        - <div class="col-*"></div>를 추가한다.
+        * 추가된 행에 새로운 열을 추가한다.
+        * col-*에서 *에는 1~12까지의 숫자를 지정한다.
+        * 1로 지정한 경우 열의 전체 너비중에서 1/12 만큼의 폭을 가지는 열이 추가된다.
+        * 12로 지정한 경우 열의 전체 너비중에서 12/12 만큼의 폭을 가지는 열이 추가된다.
+      -->
+      <div class="row mt-5" >
+        <div class="col-12">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>관리자 페이지 입니다.</h2>
+            <p>
+              관리자 페이지에서는 직원,부서,직종과 관련된 다양한 작업을 할 수 있습니다.
+            </p>
+            <p>
+              관리자 페이지의 모든 메뉴는 관리자 권한으로 로그인 후 사용가능 합니다.
+              아래의 로그인 버튼을 클릭해서 사용자 인증을 받으신 후 작업을 진행하시기 바라겠습니다.
+            </p>
+            <a href="" class="btn btn-primary btn-lg">로그인</a>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!--
+      bootstrap.bundle.min.js는 자바스크립트 파일이다.
+      부트스트랩에서 제공하는 다양한 컴포넌트들이 작동하기 위해서는 bootstrap.bumdle.min.js가 필요하다.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>

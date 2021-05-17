@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">중앙HTA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">직원관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">부서관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">직종관리</a>
+            </li>
+          </ul>
+          <ul class="d-flex navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그아웃</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">회원가입</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <h4 class="card-header">직원정보 입력폼</h4>
+            <div class="card-body">
+              <form class="row align-items-center">
+                <div class="col-6 mb-3">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" name="firstName" id="first-name">
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" name="lastName" id="last-name">
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">소속부서</label>
+                  <select class="form-select" name="deptId" id="dept-id">
+                    <option value="" selected disabled> 소속부서를 선택하세요</option>
+                    <option value="10"> 기획실</option>
+                    <option value="20"> 인사팀</option>
+                    <option value="30"> 총무팀</option>
+                    <option value="40"> 경리팀</option>
+                    <option value="50"> 영업팀</option>
+                  </select>
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">직종</label>
+                  <select class="form-select" name="jobId" id="job-id">
+                    <option value="" selected disabled> 근무할 직종을 선택하세요</option>
+                    <option value="1000"> 관리직</option>
+                    <option value="2000"> 인사관리직</option>
+                    <option value="3000"> 회계직</option>
+                    <option value="4000"> 경리직</option>
+                    <option value="5000"> 영업직</option>
+                  </select>
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">급여</label>
+                  <input type="number" class="form-control">
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">커미션</label>
+                  <div class="form-check">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0" checked>
+                      <label class="form-check-label">없음</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.1">
+                      <label class="form-check-label">0.1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.15">
+                      <label class="form-check-label">0.15</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.2">
+                      <label class="form-check-label">0.2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.25">
+                      <label class="form-check-label">0.25</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.3">
+                      <label class="form-check-label">0.3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="comm" value="0.35">
+                      <label class="form-check-label">0.35</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">전화번호</label>
+                  <input type="text" class="form-control" name="phone" id="phone">
+                </div>
+                <div class="col-6 mb-3">
+                  <label class="form-label">이메일</label>
+                  <input type="text" class="form-control" name="email" id="email">
+                </div>
+                <div class="col-12 mb-1 text-end">
+                  <a href="" class="btn btn-secondary">취소</a>
+                  <button type="submit" class="btn btn-primary">등록</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

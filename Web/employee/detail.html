@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/home.html">Eundoo Company</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">직원관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">부서관리</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">직종관리</a>
+            </li>
+          </ul>
+          <ul class="d-flex navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">로그아웃</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">회원가입</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-3">
+          <div class="card">
+            <h4 class="card-header">부서별 직원목록</h4>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <!--
+                    horizontal form
+                    폼 그룹에 .row클래스를 추가하고, col-*클래스를 사용해서
+                    라벨이나 컨트롤의 폭을 지정하는 폼이다.
+                    수평방향으로 라벨과 컨트롤(폼 입력요소)이 배치되는 폼을 작성할 수 있다.
+                  -->
+                  <form>
+                    <div class="row">
+                      <div class="col-8">
+                        <select class="form-control" name="deptId" id="dept-id">
+                          <option value="">부서를 선택하세요</option>
+                          <option value="10"> 기획실</option>
+                          <option value="20"> 인사팀</option>
+                          <option value="30"> 총무팀</option>
+                          <option value="40"> 경리팀</option>
+                          <option value="50"> 영업팀</option>
+                        </select>
+                      </div>
+                    <div class="col-4">
+                      <button type="submit" class="btn btn-primary">조회</button>
+                    </div>
+                  </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                 <div class="list-group">
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action active">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                   <a href="" class="list-group-item list-group-item action">홍길동</a>
+                 </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="card">
+            <h4 class="card-header"><strong class="text-primary">홍길동</strong>직원 상세정보</h4>
+            <div class="card-body">
+              <h5 class="card-title">기본정보</h5>
+              <table class="table table-bordered mb-4">
+                <colgroup>
+                  <col width="15%"/>
+                  <col width="35%"/>
+                  <col width="15%"/>
+                  <col width="35%"/>
+                </colgroup>
+                <tr>
+                  <th>아이디</th><td>100</td>
+                  <th>이름</th><td>홍길동</td>
+                </tr>
+                <tr>
+                  <th>소속부서명</th><td>기술팀</td>
+                  <th>직종</th><td>웹 프로그래머</td>
+                </tr>
+                <tr>
+                  <th>전화번호</th><td>010-1234-5678</td>
+                  <th>이메일</th><td>hong@gmail.com</td>
+                </tr>
+                <tr>
+                  <th>급여</th><td>3,500,000원</td>
+                  <th>커미션</th><td>없음</td>
+                </tr>
+                <tr>
+                  <th>입사일</th><td>2010-12-01</td>
+                  <th>근무년한</th><td>10년 6개월</td>
+                </tr>
+              </table>
+              <h5>직종 변경 이력</h5>
+              <table class="table table-bordered">
+                <colgroup>
+                  <col width="10%" />
+                  <col width="20%" />
+                  <col width="20%" />
+                  <col width="25%" />
+                  <col width="25%" />
+                </colgroup>
+                <thread>
+                  <tr>
+                    <th>순번</th>
+                    <th>시작일</th>
+                    <th>종료일</th>
+                    <th>직종</th>
+                    <th>근무부서</th>
+                  </tr>
+                </thread>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2015-04-01</td>
+                    <td>2018-05-31</td>
+                    <td>품질테스트</td>
+                    <td>테스트팀</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2015-04-01</td>
+                    <td>2018-05-31</td>
+                    <td>IT 프로그래머</td>
+                    <td>기술팀</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2015-04-01</td>
+                    <td>2018-05-31</td>
+                    <td>웹프로그래머</td>
+                    <td>기술팀</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
