@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>인라인 태그(엘리먼트)와 블록 태그(엘리먼트)</h1>
+  <p>inline과 block은 브라우저가 태그를 화면에 표시하는 방식이다.</p>
+  <p>모든 태그는 기본 표시방법이 정해져있다.</p>
+  <p>모든 태그는 표시방법을 변경할 수 있다.</p>
+
+  <h3 style="background-color: yellow;">블록 엘리먼트</h3>
+  <!--
+    h1~h6, p, ol, li, dl, dt, dd, table, form, header, main, footer, article
+    div
+  -->
+  <p>Block 엘리먼트는 항상 새로운 줄에서 시작한다.</p>
+  <p>Block 엘리먼트는 항상 이용가능한 전체 너비를 차지한다.</p>
+  <p>Block 엘리먼트는 다른 ???.</p>
+  <p style="background-color: yellow; text-align: right;">Block 엘리먼트는 내부 컨텐츠를 정렬할 수 있다.</p>
+  <p style="background-color: yellow; width: 400px;">Block 엘리먼트는 ??</p>
+  <p style="background-color: yellow; width: 700px;">Block 엘리먼트는 ??</p>
+
+  <h3>인라인 엘리먼트</h3>
+  <!--
+    a, img, input, button, select, textarea, lable
+    b, string, i , em, small, mark,. del
+    span
+  -->
+  <p>Inline 엘리먼트는 새로운 줄에서 시작하지 않는다.</p>
+  <p>Inline 엘리먼트는 필요한 만큼의 너비만 차지한다.</p>
+  <p>Inline 엘리먼트는 block엘리먼트를 포함할 수 없다.</p>
+  <p>Inline 엘리먼트는 대부분 block엘리먼트를 포함할 수 없다.</p>
+    <a href = "" style="border: 1px soliud red;">링크</a>
+    <b style="border: 1px solid red;">컨텐츠</b>
+    <strong style="border: 1px solid red;">컨텐츠</strong>
+    <em style="border: 1px solid red;">컨텐츠</ㄷ>
+    <mark style="border: 1px solid red;">컨텐츠</mark>
+
+  <h3>화면 표시방법 변경하기</h3>
+  <!--
+    css의 display 프로퍼티로 엘리먼트의 표시방법을 변경할 수 있다.
+    - display:none;     엘리먼트가 화면에 표시되지 않는다.
+    - display:inline;   엘리먼트가 inline 엘리먼트처럼 화면에 표시된다.
+    - display:block;    엘리먼트가 block 엘리먼트처럼 화면에 표시된다.
+  -->
+  <p style="background-color: yellow; display: none;">컨텐츠1</p>
+  <p style="background-color: yellow;">컨텐츠2</p>
+  <p style="background-color: yellow; display: inline;">컨텐츠3</p>
+
+  <h3>사용자와 상호작용해서 표시방법 변경하기</h3>
+  <p style="display: none">첫번째 컨텐츠</p>
+  <p style="display: none">두번째 컨텐츠</p>
+  <p>
+    <button onclick="displayContent1()">버튼1</button>
+    <button onclick="displayContent2()">버튼2</button>
+  </p>
+  <script>
+    function displayContent1() {
+      document.querySelector("content-1").style.display = "block";
+      document.querySelector("content-1").style.display = "block";
+    }
+    function displayContent2() {
+      document.querySelector("content-1").style.display = "none";
+      document.querySelector("content-2").style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <title>Document</title>
+  <style>
+  /*
+    id속성값이 wrapper인 태그 안에 있는 p태그를 선택한다.
+  */
+  #wrapper p {color: red;}
+  /*
+    id속성값이 wrapper인 태그 바로 안에 있는 p태그를 선택한다.
+    현재 HTML문서에서는 적용대상이 없음
+  */
+  #wrapper > p {border: 1px solid black;}
+  /*
+    class속성값이 box인 태그 안에 있는 p를 선택한다.
+  */
+  .box p {font-size: 20px}
+  /*
+    class속성값이 box인 태그 바로 안에 있는 p를 선택한다.
+  */
+  .box > p {text-decoration: underline;}
+  div {border: 1px solid black; padding: 10px;}
+
+  /*
+    h3의 동생들 중에서 모든 p를 선택한다.
+  */
+  h3 ~ p {background-color: lightgreen;}
+  /*
+   h3의 첫번째 동생인 p를 선택한다.
+   현재 HTML문서에서는 적용대상이 없다.
+   현재 HTML문서에서 h3의 첫번째 동생은 div이다.
+  */
+  h3 + p {border: 2px solid black;}
+  </style>
+</head>
+<body>
+  <h1>CSS 선택자 사용하기</h1>
+  
+  <div id="wrapper">
+    <div class="box">
+    <h3>선택자 연습</h3>
+    <div>
+      <p></p>
+    </div>
+    <p>다양한 CSS선택자를 연습해보자</p>
+    <p>기본 선택자, 자손 선택자, 자식 선택자, 형제 선택자 연습</p>
+    </div>
+  </div>
+
+</body>
+</html>
